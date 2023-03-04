@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function createQueue() {
+    let items = [];
+  
+    function enqueue(element) {
+      items.push(element);
+    }
+  
+    function dequeue() {
+      if (isEmpty()) {
+        return null;
+      }
+      return items.shift();
+    }
+  
+    function front() {
+      if (isEmpty()) {
+        return null;
+      }
+      return items[0];
+    }
+  
+    function isEmpty() {
+      return items.length === 0;
+    }
+  
+    function size() {
+      return items.length;
+    }
+  
+    function clear() {
+      items = [];
+    }
+  
+    function print() {
+      console.log(items.toString());
+    }
+  
+    return {
+      enqueue,
+      dequeue,
+      front,
+      isEmpty,
+      size,
+      clear,
+      print,
+    };
+  }
+let myQueue = createQueue();
+myQueue.enqueue(1);
+myQueue.enqueue(2);
+myQueue.enqueue(3);
+myQueue.enqueue(4);
+myQueue.enqueue(5);
+myQueue.enqueue(6);
+myQueue.print(); 
+console.log(myQueue.dequeue());
+console.log(myQueue.front());
+console.log(myQueue.size()); 
+myQueue.clear();
+console.log(myQueue.isEmpty());
+    </script>
+    
+</body>
+</html>

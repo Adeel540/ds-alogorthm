@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // array 
+       var array =[1,2,3,4,5,3,5,7];
+       for(let i =0; i< array.length;i++)
+       {
+        document.write(`${i} is ${array[i]}  <br>`)
+       }
+
+    //stack data structure
+
+// function stack(){
+//     var item=[]
+//     function push(ele){
+//         item.push(ele)
+
+//     }
+//     function pop(){
+//         if(isEmpty()){
+//             return null
+
+//         }
+//         return item.pop()
+        
+//     }
+//     function print(){
+//         console.log(item.toString())
+//     }
+//     return{
+//         push,
+//         pop,
+//         print
+//     }
+// }
+
+// var mys=stack()
+// mys.push(1)
+// mys.push(2)
+// mys.push(3)
+// mys.push(4)
+// mys.print()
+// console.log(mys.pop())
+// program to implement stack data structure
+class Stack {
+    constructor() {
+        this.items = [];
+    }
+    
+    // add element to the stack
+    add(element) {
+        return this.items.push(element);
+    }
+    
+    // remove element from the stack
+    remove() {
+        if(this.items.length > 0) {
+            return this.items.pop();
+        }
+    }
+    
+    // view the last element
+    peek() {
+        return this.items[this.items.length - 1];
+    }
+    
+    // check if the stack is empty
+    isEmpty(){
+       return this.items.length == 0;
+    }
+   
+    // the size of the stack
+    size(){
+        return this.items.length;
+    }
+ 
+    // empty the stack
+    clear(){
+        this.items = [];
+    }
+}
+
+let stack = new Stack();
+stack.add(1);
+stack.add(2);
+stack.add(4);
+stack.add(8);
+console.log(stack.items);
+
+stack.remove();
+console.log(stack.items);
+
+console.log(stack.peek());
+
+console.log(stack.isEmpty());
+
+console.log(stack.size());
+
+stack.clear();
+console.log(stack.items);
+
+
+
+
+    //Delete operation (linkslist part)
+  
+
+
+//serching array
+var search = [1,2,3,4,5]
+function serach(search,target){
+    for(let i=0;i<search.length;i++){
+        if(search[i]==target){
+
+            return i;
+        }
+    }
+    return "not found"
+}
+console.log(serach(search,5))
+
+let Delete =[30,20,29,21,9,3]
+    Delete.splice(0,1);
+    // console.log(Delete)
+    // let position=2
+    // for(let i=position; i<Delete.length-1;i++){
+    //     Delete[i]=position[i+1];
+    // }
+    console.warn(Delete)
+
+//insertion aray
+    let insert =[30,20,29,21,9,3]
+    insert.unshift(40)
+    console.warn(insert);
+
+    insert.push(12)
+    console.warn(insert)
+
+    insert.splice(2,0,5)
+    console.warn(insert)
+
+
+
+
+    </script>
+    
+</body>
+</html>
